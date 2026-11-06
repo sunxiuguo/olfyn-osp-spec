@@ -190,11 +190,16 @@ POST /v1/capture
 }
 ```
 
-**Response:**
+**Response:** A full OSP v1.1 profile object conforming to
+[`schema/osp-profile-v1.1.json`](schema/osp-profile-v1.1.json), including the required
+`osp_version` and `created_at` fields. The `capture` field records how it was created.
+
 ```json
 {
+  "osp_version": "1.1",
   "scent_id":  "memoria_abuela_rosa_a3f2b1",
   "name":      "Perfume de la abuela Rosa",
+  "created_at": "2026-07-01T12:00:00Z",
   "profile": {
     "dulce":    0.35,
     "floral":   0.30,
